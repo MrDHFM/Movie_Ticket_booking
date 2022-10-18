@@ -1,0 +1,46 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "@emotion/react": "11.8.2",
+    "@emotion/styled": "11.8.1",
+    "@mui/icons-material": "5.5.1",
+    "@mui/material": "5.5.2",
+    "axios": "0.26.1",
+    "moment": "^2.29.4",
+    "qrcode": "1.5.0",
+    "react": "17.0.2",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "17.0.2",
+    "react-hook-form": "7.28.1",
+    "react-qr-code": "^2.0.8",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "^5.0.1",
+    "react-share": "4.4.0",
+    "react-youtube": "7.14.0",
+    "shaka-player": "3.1.6"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.13.8",
+    "gh-pages": "^4.0.0",
+    "typescript": "3.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

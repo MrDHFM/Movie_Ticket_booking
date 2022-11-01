@@ -25,6 +25,7 @@ import Footer from "../Footer/Footer";
 import Movie from "../Movie/Movie";
 
 import "./Theater.css";
+import { Grid } from "@mui/material";
 
 const formatDate = Moment();
 const tomorrowMoment = formatDate.clone().add(1, "days");
@@ -144,18 +145,24 @@ const ResponsiveAppBar = () => {
       <div id="theaterList">
         {theaters && (
           <div>
-            <Box sx={{ flexGrow: 1, display: { xs: "flex" }, mr: "2" }}>
-              {screens.map((screen) => (
-                <Card sx={{ maxWidth: 345, m: "10px" }} key={screen}>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      <Button onClick={handleExpandClick} value={screen}>
-                        {screen}
-                      </Button>
-                    </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                    {/* <Typography>Show Time</Typography>
+            <Box
+              sx={{ flexGrow: 1, display: { xs: "flex" }, mr: "2" }}
+              sm={6}
+              md={3}
+            >
+              <Grid container>
+                {screens.map((screen) => (
+                  <Grid item sm={12} md={4} lg={3}>
+                    <Card sx={{ m: "10px" }} key={screen}>
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          <Button onClick={handleExpandClick} value={screen}>
+                            {screen}
+                          </Button>
+                        </Typography>
+                      </CardContent>
+                      <CardActions disableSpacing>
+                        {/* <Typography>Show Time</Typography>
                     <ExpandMore
                       expand={expanded}
                       onClick={handleExpandClick}
@@ -164,26 +171,28 @@ const ResponsiveAppBar = () => {
                     >
                       <ExpandMoreIcon onClick={arrowClick} value={screen} />
                     </ExpandMore> */}
-                  </CardActions>
-                  <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                      <Box sx={{ flexGrow: 1, display: { xs: "flex" } }}>
-                        {showTime.map((time) => (
-                          <Button
-                            id="timeButton"
-                            key={time}
-                            value={time}
-                            onClick={clickTime}
-                            sx={{ my: 2, color: "black", display: "block" }}
-                          >
-                            {time}
-                          </Button>
-                        ))}
-                      </Box>
-                    </CardContent>
-                  </Collapse>
-                </Card>
-              ))}
+                      </CardActions>
+                      <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <CardContent>
+                          <Box sx={{ flexGrow: 1, display: { xs: "flex" } }}>
+                            {showTime.map((time) => (
+                              <Button
+                                id="timeButton"
+                                key={time}
+                                value={time}
+                                onClick={clickTime}
+                                sx={{ my: 2, color: "black", display: "block" }}
+                              >
+                                {time}
+                              </Button>
+                            ))}
+                          </Box>
+                        </CardContent>
+                      </Collapse>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
             </Box>
           </div>
         )}

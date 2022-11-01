@@ -1,0 +1,13 @@
+#card:hover {
+  /*   border: 3px solid rgb(151, 219, 224);
+ */
+  box-shadow: 5px 2px 20px 5px #5b5b5b;
+}
+#card {
+  width: fit-content;
+  height: fit-content;
+}
+#movieImg {
+  height: 300px;
+  object-fit: fill;
+}

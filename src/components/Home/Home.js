@@ -62,9 +62,9 @@ const Home = () => {
     region == "India" ? getData() : getGData();
   }, []);
 
-  const Book = () => {
+  /*  const Book = () => {
     navigate("/Movie/SarkaruVaariPaata");
-  };
+  }; */
 
   return (
     <div>
@@ -127,7 +127,7 @@ const Home = () => {
         >
           {data &&
             data.map((i, key) => (
-              <Grid item xs={2} sm={4} md={4} key={key}>
+              <Grid item xs={2} sm={4} md={4} lg={3} key={key}>
                 <MovieCards passed={i} />
               </Grid>
             ))}

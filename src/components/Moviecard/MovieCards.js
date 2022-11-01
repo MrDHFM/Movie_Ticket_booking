@@ -13,6 +13,7 @@ import {
   Rating,
   Modal,
   Paper,
+  CardMedia,
 } from "@mui/material";
 //import { Box } from "@mui/system";
 import not from "../../Image/notfound.png";
@@ -46,34 +47,43 @@ const MovieCards = (props) => {
       <Card
         id="card"
         sx={{
-          maxWidth: 500,
           border: "0px solid black",
           marginTop: "20px",
           boxShadow: "10px 10px 10px rgba(176, 174, 174, 0.985)",
         }}
       >
-        <img
-          style={{ width: 290, height: 400 }}
+        {/*   <img
+          style={{ height: 200 }}
           src={
             props.passed.poster_path == null
               ? not
               : `https://image.tmdb.org/t/p/original/${props.passed.poster_path}`
           }
           alt="poster.exe"
-        ></img>
+        ></img> */}
+        <CardMedia
+          id="movieImg"
+          component="img"
+          height="140"
+          image={
+            props.passed.poster_path == null
+              ? not
+              : `https://image.tmdb.org/t/p/original/${props.passed.poster_path}`
+          }
+          alt="green iguana"
+        />
         <CardContent>
           <Rating name="read-only" value={props.passed.popularity} readOnly />
           {props.passed.original_title === props.passed.title ? (
-            <Typography gutterBottom variant="h6" component="div">
-              {" "}
-              {props.passed.title}{" "}
+            <Typography variant="h6" component="div">
+              {props.passed.title}
             </Typography>
           ) : (
             <div>
               {/*  <Typography gutterBottom variant="h6" component="div">
                 {props.passed.original_title}
               </Typography> */}
-              <Typography gutterBottom variant="h6" component="div">
+              <Typography variant="h6" component="div">
                 {props.passed.title}
               </Typography>
             </div>
@@ -82,7 +92,6 @@ const MovieCards = (props) => {
             {props.passed.overview}
           </Typography> */}
         </CardContent>
-
         <CardActions>
           <div
             style={{
@@ -92,7 +101,10 @@ const MovieCards = (props) => {
             }}
           >
             <Link
-              style={{ textDecoration: "none", marginRight: "10px" }}
+              style={{
+                textDecoration: "none",
+                marginRight: "10px",
+              }}
               to={`/${props.passed.title}/theaters`}
               /* to={`/movie/${props.passed.title}`} */
               state={props.passed}

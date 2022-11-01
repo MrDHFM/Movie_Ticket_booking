@@ -71,7 +71,7 @@ input[type="password"] {
   color: #000;
 }
 #foot {
-  margin-top: 45%;
+  display: none;
 }
 #error {
   color: red;

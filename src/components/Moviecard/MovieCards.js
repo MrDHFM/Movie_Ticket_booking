@@ -131,6 +131,7 @@ const MovieCards = (props) => {
 
       <Modal open={open} onClose={handleClose}>
         <Paper
+          id="modal"
           sx={{
             position: "absolute",
             top: "50%",
@@ -143,6 +144,7 @@ const MovieCards = (props) => {
           }}
         >
           <Card
+            id="details"
             raised
             sx={{
               maxWidth: 1100,
@@ -153,12 +155,14 @@ const MovieCards = (props) => {
           >
             {props.passed.backdrop_path == null ? (
               <img
+                className="detailImage"
                 style={{ width: 700, height: 500 }}
                 src={`https://image.tmdb.org/t/p/original/${props.passed.poster_path}`}
                 alt="poster.exe"
               ></img>
             ) : (
               <img
+                className="detailImage"
                 style={{ width: 690, height: 500 }}
                 src={`https://image.tmdb.org/t/p/original/${props.passed.backdrop_path}`}
                 alt="poster.exe"

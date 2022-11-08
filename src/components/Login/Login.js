@@ -70,7 +70,7 @@ const Login = (props) => {
               name="userName"
               value={userName}
               onChange={userNameChange}
-              placeholder="Enter Username"
+              placeholder="Vinay"
               required
             />
             <p>Password</p>
@@ -80,7 +80,7 @@ const Login = (props) => {
               name="pwd"
               value={password}
               onChange={passwordChange}
-              placeholder="Enter Password"
+              placeholder="vinay12"
               required
             />
             <input type="submit" id="submit" value="Login" />

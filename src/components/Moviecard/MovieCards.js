@@ -42,10 +42,12 @@ const MovieCards = (props) => {
       });
   };
 
+  console.log(keys);
+
   return (
     <div>
       <Card
-        id="card"
+        id={`card${props.passed.id}`}
         sx={{
           border: "0px solid black",
           marginTop: "20px",

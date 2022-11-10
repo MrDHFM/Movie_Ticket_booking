@@ -3,9 +3,15 @@
  */
   box-shadow: 5px 2px 20px 5px #5b5b5b;
 }
-#card {
+/* #card {
   width: fit-content;
   height: fit-content;
+} */
+div[id^="card"] {
+  color: #f00;
+  width: fit-content;
+  height: fit-content;
+  /* and so on... */
 }
 #movieImg {
   height: 300px;

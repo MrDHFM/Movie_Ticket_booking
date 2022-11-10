@@ -127,7 +127,7 @@ const Home = () => {
         >
           {data &&
             data.map((i, key) => (
-              <Grid item xs={2} sm={4} md={4} lg={3} key={key}>
+              <Grid item xs={2} id={key} sm={4} md={4} lg={3} key={key}>
                 <MovieCards passed={i} />
               </Grid>
             ))}

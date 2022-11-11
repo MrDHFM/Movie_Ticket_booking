@@ -8,7 +8,6 @@
   height: fit-content;
 } */
 div[id^="card"] {
-  color: #f00;
   width: fit-content;
   height: fit-content;
   /* and so on... */

@@ -111,11 +111,17 @@ const MovieCards = (props) => {
               /* to={`/movie/${props.passed.title}`} */
               state={props.passed}
             >
-              <Button size="small" variant="contained" color="primary">
+              <Button
+                size="small"
+                id={`btn_${props.passed.id}`}
+                variant="contained"
+                color="primary"
+              >
                 Book Ticket
               </Button>
             </Link>
             <Button
+              id={`btnMD_${props.passed.id}`}
               size="small"
               variant="contained"
               color="secondary"
